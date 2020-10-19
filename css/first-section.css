@@ -44,7 +44,7 @@
     width: 100%;
     text-align: start;
     font-size: 18px;
-    font-weight: 600;  
+    font-weight: 600;
 }
 .container-2 p {
     margin-bottom: 5px;
@@ -61,7 +61,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .middle-section {
+    .first-section {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
