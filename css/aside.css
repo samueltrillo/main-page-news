@@ -1,0 +1,36 @@
+aside {
+    width: 70%;
+    margin: 10px auto 10px auto;
+    border: 3px black solid;
+    box-shadow: 4px 4px 8px #888888
+}
+aside h4 {
+    margin: 15px 0px;
+    text-align: center;
+    color: #d32531;
+    font-size: 30px;
+    font-weight: 700;
+}
+.trending-list {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+aside ol {
+    list-style-type: decimal;
+}
+aside li {
+    border-bottom: black 2px solid;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+.bottom-li {
+    border-bottom: none;
+}
+@media only screen and (min-width: 768px) {
+    aside {
+        margin-top: 60px;
+        box-sizing: border-box;
+    } 
+}

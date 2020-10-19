@@ -1,0 +1,23 @@
+body {
+    margin: 0px;
+    font-family: Graphik, sans-serif;
+    letter-spacing: -1px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: #d32531;
+}
+h1 {
+    font-weight: 600;
+    font-size: 30px;
+    color: #d32531;
+}
+@media only screen and (min-width: 768px) {
+    body {
+        width: 95%;
+        margin: auto;
+    }
+}

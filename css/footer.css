@@ -1,0 +1,40 @@
+footer {
+    background-color: black;
+    font-weight: 700;
+}
+footer h5 {
+    margin: 15px 0px;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+footer li {
+    font-size: 18px;
+    line-height: 30px;
+}
+footer a{
+    color: white;
+}
+footer a:hover {
+    border-left: #d32531 2px solid;
+}
+.blocks {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+i {
+    margin-left: 12px;
+}
+.end-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+.end-page img {
+    margin-right: 15px;
+}

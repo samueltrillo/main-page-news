@@ -1,0 +1,36 @@
+#navbar ul {
+    list-style-type: none;
+    padding: 0px;
+    overflow:hidden;
+    margin:13px;
+}
+#navbar li {
+    display: inline;
+    font-weight: bold;
+    color:black;
+}
+#navbar a {
+    font-family: Graphik,sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color:black;
+    padding: 0px 25px;
+    position: relative;
+    left:0px
+}
+#navbar a:hover {
+    color:#d32531; 
+}
+#navbar {
+    display: none;
+    border-bottom: red 2px solid;
+}
+@media only screen and (min-width: 768px) {
+    #navbar {
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+

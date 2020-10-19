@@ -1,0 +1,38 @@
+.new-header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px 40px 20px 40px;
+    background-image: url(../img/rs-wallpaper2-copy2.jpg);
+    background-size: cover;
+}
+.new-header a {
+    color: white;
+    font-weight: 700;
+}
+.new-header a:hover {
+    color: black
+}
+.lupa{
+    display: none;
+    position: relative;
+    bottom: 5px;
+    text-decoration: none;
+    color:white
+}
+.lupa a:hover{
+    color:#000000;
+}
+.lupa a{
+    text-decoration: none;
+    color:white;
+}
+@media only screen and (min-width: 768px) {
+    .new-header {
+        display: flex
+    }
+    .lupa {
+        display: block;
+    }
+}
