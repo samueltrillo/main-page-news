@@ -3,7 +3,6 @@ aside {
     margin: 10px auto 10px auto;
     border: 3px black solid;
     box-shadow: 4px 4px 8px #888888;
-    overflow-y: scroll;
 }
 aside h4 {
     margin: 15px 0px;
