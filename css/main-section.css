@@ -37,7 +37,7 @@
 .container-2 img {
     width: 100%;
     height: auto;
-    margin-top: 10px;  
+    margin-top: 10px;
 }
 .container-2 h3 {
     margin: 10px 0px;
@@ -59,9 +59,8 @@
     border-top: #d32531 1px solid;
     box-shadow: 4px 4px 8px #888888
 }
-
 @media only screen and (min-width: 768px) {
-    .first-section {
+    .main-section {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
