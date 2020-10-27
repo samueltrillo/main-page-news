@@ -5,7 +5,8 @@
     align-items: flex-start;
 }
 .the-latest-news {
-    width: 50%;
+    width: 100%;
+    min-width: 220px;
     padding: 10px 0px;
     margin: auto;
     background-color: white;
@@ -41,7 +42,8 @@
     line-height: 16px;
 }
 .container-2{
-    width: 25%;
+    
+    min-width: 220px;
 }
 .container-2 img {
     width: 100%;
@@ -69,9 +71,8 @@
     box-shadow: 4px 4px 8px #888888
 }
 @media only screen and (min-width: 768px) {
-    
-    }
     .the-latest-news {
+        width: 50%;
         border-top: none;
         border-bottom: none;
         margin: 0;
@@ -88,4 +89,7 @@
         box-shadow: none;
         margin-top: 10px;
     }
+    .container-2{
+    width: 25%;
+}
 }

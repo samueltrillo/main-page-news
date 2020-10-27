@@ -11,7 +11,8 @@
     border-top: 2px solid #d32531;
 }
 .box1 {
-    width: 355px;
+    width: 100%;
+    max-width: 350px;
     padding: 10px;
     box-sizing: border-box;
 }
