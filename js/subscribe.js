@@ -10,12 +10,15 @@ var city = document.getElementById("city");
 var zipCode = document.getElementById("zipCode");
 var idCard = document.getElementById("idCard");
 var sendButton = document.getElementById("button");
+var closeButton = document.querySelector(".close");
+
 //Keydown function for dynamic title
 completeName.addEventListener("keydown", dynamicHello);
 function dynamicHello() {
    a = document.getElementById("completeName").value;
    document.getElementById("dynamic-hello").innerHTML = "<h2> Hola "+ a +"</h2>";
 }
+
 //Blur event
 completeName.addEventListener("blur",veriName);
 email.addEventListener("blur",veriEmail);
@@ -27,6 +30,7 @@ adress.addEventListener("blur",veriAdress);
 city.addEventListener("blur",veriCity);
 zipCode.addEventListener("blur",veriZipCode);
 idCard.addEventListener("blur",veriId);
+
 //Onfocus event
 completeName.addEventListener("focus",adv1);
 email.addEventListener("focus",adv2);
@@ -38,19 +42,31 @@ adress.addEventListener("focus",adv7);
 city.addEventListener("focus",adv8);
 zipCode.addEventListener("focus",adv9);
 idCard.addEventListener("focus",adv10);
+
 //Onclick function
 sendButton.onclick = function() {
-   alert ("Nombre completo " + veriName() +
-         " - Email " + veriEmail() +
-         " - Contraseña " + veriPass() +
-         " - Repetir contraseña " + veriPass() +
-         " - Edad " + veriAge() +
-         " - Teléfono " + veriPhone() +
-         " - Dirección" + veriAdress() +
-         " - Ciudad " + veriCity() +
-         " - Código Postal " + veriZipCode() +
-         " - DNI " +veriId());
+      document.querySelector(".modal").style.display ="block";
+      document.getElementById("id1").innerHTML = "Nombre completo: " + veriName();
+      document.getElementById("id2").innerHTML = "Email: " + veriEmail();
+      document.getElementById("id3").innerHTML = "Contraseña: " + veriPass();
+      document.getElementById("id4").innerHTML = "Contraseña reescrita: " + veriPassAgain();
+      document.getElementById("id5").innerHTML = "Edad: "+ veriAge();
+      document.getElementById("id6").innerHTML = "Teléfono: " + veriPhone();
+      document.getElementById("id7").innerHTML = "Dirección: " + veriAdress();
+      document.getElementById("id8").innerHTML = "Ciudad: " + veriCity();
+      document.getElementById("id9").innerHTML = "Código postal: " + veriZipCode();
+      document.getElementById("id10").innerHTML = "DNI: " + veriId();
 }
+closeButton.onclick = function() {
+   document.querySelector(".modal").style.display ="none";
+}
+window.onclick = function(event) {
+   if (event.target == document.querySelector(".modal")) {
+      document.querySelector(".modal").style.display = "none";
+   }
+ }
+
+ //Validation functions
 function veriName(){
    a = document.getElementById("completeName").value;
    if (a.indexOf(" ") === -1 || a.length < 7) {
@@ -172,10 +188,3 @@ function adv9(){
 function adv10(){
    document.querySelector(".advIdCard").style.display = "none";
 }
-
-//teElement("div"); //Element div created
-//var text = document.createTextNode("hooolaaa"); //Text created
-//adv.appendChild(text); //Text inside element p
-//var container = document.querySelector(".box1");
-//var ufff = document.querySelector(".completeName");
-//ufff.insertAdjacentElement("afterend",adv);
