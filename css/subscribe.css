@@ -1,20 +1,57 @@
+h1 {
+   text-align: center;
+    margin: 20px 0;
+}
+#dynamic-hello {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 600;
+}
+p {
+    margin-top: 25px;
+    margin-bottom: 7px;
+    border-bottom:#d32531 2px solid ;
+}
 form {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+}
+.box1 {
+    padding: 0px 32px;
 }
 input {
-    min-width: 600px;
+    min-width: 300px;
 }
 .advName, .advEmail, .advPass, .advPassAgain, .advAge, .advPhone, .advAdress, .advCity, .advZip, .advIdCard {
     display: none;
+    width: 300px;
+    padding: 5px;
+    min-width: 300px;
+    font-size: 13px;
+    border: #d32531 2px solid ;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px #d32531
 }
 .button-cont {
     display: flex;
     justify-content: center;
 }
 #button {
+    margin-top: 30px;
+    margin-bottom: 30px;
     width: 200px;
+    background-color: #d32531;
+    border-radius: 2px;
+    border-color: #d32531;
+    font-family: Graphik, sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+#button:hover {
+    opacity: 70%;
 }
 /*
 .modal {

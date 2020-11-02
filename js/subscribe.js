@@ -50,9 +50,7 @@ sendButton.onclick = function() {
          " - Ciudad " + veriCity() +
          " - Código Postal " + veriZipCode() +
          " - DNI " +veriId());
-  
 }
-
 function veriName(){
    a = document.getElementById("completeName").value;
    if (a.indexOf(" ") === -1 || a.length < 7) {
