@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="css/nav.css">
         <link rel="stylesheet" type="text/css" href="css/body.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
-        <link rel="stylesheet" type="text/css" href="css/suscribe.css">
+        <link rel="stylesheet" type="text/css" href="css/subscribe.css">
     </head>
 
     <body>
@@ -87,52 +87,118 @@
             </ul>
         </nav>
 
+        <h1>
+            Subscrition page
+        </h1>
+        
+        <h2 id="dynamic-hello">
+        </h2>
+
         <form name="formulario">
             <div class="box1">
                 <p>
                     Nombre completo
                 </p>
                 <input type="text" class="completeName" id="completeName" placeholder="Nombre completo">
+                <p class="advName">
+                    Debe tener más de 6 letras y al menos un espacio entre medio
+                </p>
                 <p>
                     Email
                 </p>
                 <input type="email" class="email" id="email">
+                <p class="advEmail">
+                    El email ingresado es incorrecto. Debe tener un formato válido
+                </p>
                 <p>
                     Contraseña
                 </p>
                 <input type="password" class="password" id="password">
+                <p class="advPass">
+                    La contrseña debe tener al menos 8 caracteres, formados por letras y números
+                </p>
                 <p>
                     Repita contraseña
                 </p>
                 <input type="password" class="passwordAgain" id="passwordAgain">
+                <p class="advPassAgain">
+                    La contraseña no coincide con la insertada anteriormente
+                </p>
                 <p>
                     Edad
                 </p>
                 <input type="number" class="age" id="age">
+                <p class="advAge">
+                    Debe tener más de 6 letras y al menos un espacio entre medio
+                </p>
             </div>
             <div class="box2">
                 <p>
                     Teléfono
                 </p>
                 <input type="number" class="phoneNumber" id="phoneNumber">
+                <p class="advPhone">
+                    Debe tener al menos 7 dígitos, sin espacios ni guiones, ni parentesis
+                </p>
                 <p>
                     Dirección
                 </p>
                 <input type="text" class="adress" id="adress">
+                <p class="advAdress">
+                    Debe tener al menos 5 caracteres, con letras, números y un espacio en el medio
+                </p>
                 <p>
                     Ciudad
                 </p>
                 <input type="text" class="city" id="city">
+                <p class="advCity">
+                    Debe tener al menos 3 caracteres
+                </p>
                 <p>
                     Código postal
                 </p>
                 <input type="text" class="zipCode" id="zipCode">
+                <p class="advZip">
+                    Debe tener al menos 3 caracteres
+                </p>
                 <p>
                     Número DNI
                 </p>
                 <input type="number"" class="idCard" id="idCard">
+                <p class="advIdCard">
+                    Debe tener 7 u 8 dígitos
+                </p>
             </div>
         </form>
+    
+        <div class="button-cont">
+            <button value="submit" id="button">
+                Enviar
+            </button>
+        </div>
+
+        <!--
+        <div id="myModal" class="modal">
+            
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h4>
+                    Subscription form
+                </h4>
+                <ul id="list">
+                    <li id="id1">Personal Name: </li>
+                    <li id="id2">Mail: </li>
+                    <li id="id3">Age: </li>
+                    <li id="id4">Phone Number: </li>
+                    <li id="id5">Address: </li>
+                    <li id="id6">City: </li>
+                    <li id="id7">Postal Code: </li>
+                    <li id="id8">ID Card Number: </li>
+                    <li id="id9">Password: </li>
+                </ul>
+            </div>
+        </div>
+    -->
 
         <footer>
             <div class="blocks">
@@ -237,12 +303,6 @@
                 </div>
             </div>
         </footer>
-
-   
-
-        <form>
-
-        </form>
 
         <script src="js/subscribe.js"></script>
 
