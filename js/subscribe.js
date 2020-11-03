@@ -13,10 +13,10 @@ var sendButton = document.getElementById("button");
 var closeButton = document.querySelector(".close");
 
 //Keydown function for dynamic title
-completeName.addEventListener("keydown", dynamicHello);
+completeName.addEventListener("keyup", dynamicHello);
 function dynamicHello() {
-   a = document.getElementById("completeName").value;
-   document.getElementById("dynamic-hello").innerHTML = "<h2> Hola "+ a +"</h2>";
+   var helloTitle = document.getElementById("completeName").value;
+   document.getElementById("dynamic-hello").innerHTML = "<h2> Hola "+ helloTitle +"</h2>";
 }
 
 //Blur event
@@ -32,16 +32,16 @@ zipCode.addEventListener("blur",veriZipCode);
 idCard.addEventListener("blur",veriId);
 
 //Onfocus event
-completeName.addEventListener("focus",adv1);
-email.addEventListener("focus",adv2);
-password.addEventListener("focus",adv3);
-passwordAgain.addEventListener("focus",adv4);
-age.addEventListener("focus",adv5);
-phoneNumber.addEventListener("focus",adv6);
-adress.addEventListener("focus",adv7);
-city.addEventListener("focus",adv8);
-zipCode.addEventListener("focus",adv9);
-idCard.addEventListener("focus",adv10);
+completeName.addEventListener("focus",adv);
+email.addEventListener("focus",adv);
+password.addEventListener("focus",adv);
+passwordAgain.addEventListener("focus",adv);
+age.addEventListener("focus",adv);
+phoneNumber.addEventListener("focus",adv);
+adress.addEventListener("focus",adv);
+city.addEventListener("focus",adv);
+zipCode.addEventListener("focus",adv);
+idCard.addEventListener("focus",adv);
 
 //Onclick function
 sendButton.onclick = function() {
@@ -68,7 +68,7 @@ window.onclick = function(event) {
 
  //Validation functions
 function veriName(){
-   a = document.getElementById("completeName").value;
+   const a = document.getElementById("completeName").value;
    if (a.indexOf(" ") === -1 || a.length < 7) {
       document.querySelector(".advName").style.display = "block";
       return ("Error, revisar condiciones del campo");
@@ -77,7 +77,7 @@ function veriName(){
    }
 }
 function veriEmail() {
-   a = document.getElementById("email").value;
+   const a = document.getElementById("email").value;
    if (a.search(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) === -1) {
       document.querySelector(".advEmail").style.display = "block";
       return ("Error, revisar condiciones del campo");
@@ -86,7 +86,7 @@ function veriEmail() {
    }
 }
 function veriPass() {
-   a = document.getElementById("password").value;
+   const a = document.getElementById("password").value;
    if (/[a-zA-Z]/.test(a) === false || /\s/.test(a) === true || /\d/.test(a) === false || a.length < 8) {
       document.querySelector(".advPass").style.display = "block";
       return ("Error, revisar condiciones del campo");
@@ -95,8 +95,8 @@ function veriPass() {
    }
 }
 function veriPassAgain() {
-   a = document.getElementById("password").value;
-   b = document.getElementById("passwordAgain").value;
+   const a = document.getElementById("password").value;
+   const b = document.getElementById("passwordAgain").value;
    if (a !== b) {
       document.querySelector(".advPassAgain").style.display = "block";
       return ("Error, revisar condiciones del campo");
@@ -105,7 +105,7 @@ function veriPassAgain() {
    }
 }
 function veriAge() {
-   a = document.getElementById("age").value;
+   const a = document.getElementById("age").value;
    if (a < 18 || Number.isInteger(Number(a)) === false) {
       document.querySelector(".advAge").style.display = "block";
       return ("Error, revisar condiciones del campo");
@@ -114,7 +114,7 @@ function veriAge() {
    }
 }
 function veriPhone() {
-   a = document.getElementById("phoneNumber").value;
+   const a = document.getElementById("phoneNumber").value;
    if ( a.length < 7 || /[a-zA-Z]/.test(a) === true) {
       document.querySelector(".advPhone").style.display = "block";
       return ("Error, revisar condiciones del campo");
@@ -123,7 +123,7 @@ function veriPhone() {
    }
 }
 function veriAdress() {
-   a = document.getElementById("adress").value;
+   const a = document.getElementById("adress").value;
    if ( a.length < 7 || /\s/.test(a) === false || /\d/.test(a) === false || /[a-zA-Z]/.test(a) === false ) {
       document.querySelector(".advAdress").style.display = "block";
       return ("Error, revisar condiciones del campo");
@@ -132,7 +132,7 @@ function veriAdress() {
    }
 }
 function veriCity() {
-   a = document.getElementById("city").value;
+   const a = document.getElementById("city").value;
    if (a.length < 3) {
       document.querySelector(".advCity").style.display = "block";
       return ("Error, revisar condiciones del campo");
@@ -141,7 +141,7 @@ function veriCity() {
    }
 }
 function veriZipCode(){
-   a = document.getElementById("zipCode").value;
+   const a = document.getElementById("zipCode").value;
    if (a.length < 3) {
       document.querySelector(".advZip").style.display = "block";
       return ("Error, revisar condiciones del campo");
@@ -150,7 +150,7 @@ function veriZipCode(){
    }
 }
 function veriId() {
-   a = document.getElementById("idCard").value;
+   const a = document.getElementById("idCard").value;
    if (a.length < 7 || a.length > 8) {
       document.querySelector(".advIdCard").style.display = "block";
       return ("Error, revisar condiciones del campo");
@@ -158,33 +158,7 @@ function veriId() {
       return a;
    }
 }
-function adv1(){
-   document.querySelector(".advName").style.display = "none";
-}
-function adv2(){
-   document.querySelector(".advEmail").style.display = "none";
-}
-function adv3(){
-   document.querySelector(".advPass").style.display = "none";
-}
-function adv4(){
-   document.querySelector(".advPassAgain").style.display = "none";
-}
-function adv5(){
-   document.querySelector(".advAge").style.display = "none";
-}
-function adv6(){
-   document.querySelector(".advPhone").style.display = "none";
-}
-function adv7(){
-   document.querySelector(".advAdress").style.display = "none";
-}
-function adv8(){
-   document.querySelector(".advCity").style.display = "none";
-}
-function adv9(){
-   document.querySelector(".advZip").style.display = "none";
-}
-function adv10(){
-   document.querySelector(".advIdCard").style.display = "none";
+function adv(evt){
+   const elementClass = evt && evt.target && evt.target.nextElementSibling && evt.target.nextElementSibling.className;
+   document.querySelector("." + elementClass).style.display = "none";
 }
